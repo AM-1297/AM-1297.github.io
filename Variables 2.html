@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables 2</title>
+</head>
+<body>
+    <!-- Sección en la que se mostrará el contenido -->
+    <section id="content"></section>
+
+    <script>
+        // Add your code here
+        // Se inicializa la variable myName con el valor 'Paul'
+        let myName = 'Paul';
+        // Se cambia el valor de la variable myName a 'Jairo'
+        myName = 'Jairo';
+
+        // Se obtiene una referencia al elemento section con el id "content"
+        const section = document.getElementById('content');
+
+        // Don't edit the code below here!
+        // ¡No editar el código a continuación!
+
+        // Se borra el contenido del elemento section
+        section.innerHTML = ' ';
+        // Se crea un nuevo párrafo
+        const para = document.createElement('p');
+        // Se establece el texto del párrafo con el valor de myName
+        para.textContent = myName;
+        // Se añade el párrafo al elemento section
+        section.appendChild(para);    
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematicas 1</title>
+</head>
+<body>
+    <!-- Se crea un div con el id "section" donde se mostrarán los resultados -->
+    <div id="section"></div>
+
+    <script>
+        // Se inicializan cuatro variables con números
+        let firstNumber = 10;
+        let secondNumber = 6;
+        let thirdNumber = 20;
+        let fourthNumber = 8;
+            
+        // Se realizan operaciones con las variables
+        let sumResult = firstNumber + secondNumber;
+        let differenceResult = thirdNumber - fourthNumber;
+        let finalResult = sumResult * differenceResult;
+            
+        // Se verifica si finalResult es par o impar
+        let evenOddResult = finalResult % 2 === 0 ? 0 : 1;
+            
+        // Don't edit the code below here!
+        // No editar el código a continuación
+        
+        // Se accede al elemento con id "section" y se le añaden los resultados como párrafos
+        const section = document.getElementById('section');
+        section.innerHTML = ' ';
+        const para1 = document.createElement('p');
+        // Se verifica si finalResult es igual a 48 y se muestra un mensaje apropiado
+        const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${finalResult}`;
+        para1.textContent = `Is the finalResult 48? ${finalResultCheck}`;
+        const para2 = document.createElement('p');
+        // Se muestra un mensaje indicando si finalResult es par o impar
+        const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
+        para2.textContent = evenOddResultCheck;
+            
+        section.appendChild(para1);
+        section.appendChild(para2);
+    </script>
+</body>
+</html>

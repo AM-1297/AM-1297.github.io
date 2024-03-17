@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadenas 1</title>
+</head>
+<body>
+    <!-- Agrega un elemento div con el ID "section" -->
+    <div id="section"></div>
+
+    <script>
+        // Add your code here
+        const quoteStart = 'Don\'t judge each day by the harvest you reap';
+        const quoteEnd = ', but by the seeds that you plant.';
+        const finalQuote = quoteStart + quoteEnd;
+
+        // Selecciona el elemento con el ID "section"
+        const section = document.getElementById('section');
+
+        // Crea un párrafo y establece su contenido con la cita completa
+        const para1 = document.createElement('p');
+        para1.textContent = finalQuote;
+
+        // Agrega el párrafo al elemento "section"
+        section.appendChild(para1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadenas 3</title>
+</head>
+<body>
+    <div id="section"></div>
+
+    <script>
+        // Definimos la cita
+        const quote = 'I dO nOT lIke gREen eGgS anD HAM';
+
+        // Corregimos la cita para que tenga mayúscula inicial y todo en minúsculas excepto la primera letra
+        const fixedQuote = quote.charAt(0).toUpperCase() + quote.slice(1).toLowerCase();
+
+        // Reemplazamos "huevos verdes con jamón" con otro alimento que no guste
+        const modifiedQuote = fixedQuote.replace('green eggs and ham', 'brussels sprouts');
+
+        // Agregamos un punto al final de la cita
+        const finalQuote = modifiedQuote + '.';
+
+        // Seleccionamos el elemento div con el ID "section"
+        const section = document.getElementById('section');
+
+        // Limpiamos el contenido existente del elemento section
+        section.innerHTML = ' ';
+
+        // Creamos dos elementos de párrafo para mostrar la cita corregida y la versión final
+        const para1 = document.createElement('p');
+        const para2 = document.createElement('p');
+
+        // Establecemos el contenido de los párrafos
+        para1.textContent = modifiedQuote;
+        para2.textContent = finalQuote;
+
+        // Agregamos los párrafos al elemento section
+        section.appendChild(para1);
+        section.appendChild(para2);
+    </script>
+</body>
+</html>

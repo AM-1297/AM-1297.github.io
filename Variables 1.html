@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables 1</title>
+</head>
+<body>
+    <!-- Sección en la que se mostrará el contenido -->
+    <section id="content"></section>
+
+    <script>
+        // Add your code here
+        // Se declaran dos variables constantes: myName con el valor "Jairo" y myAge con el valor 20
+        const myName = "Jairo";
+        const myAge = 20;
+
+        // Don't edit the code below here!
+        // Se obtiene una referencia al elemento section con el id "content"
+        const section = document.getElementById('content');
+
+        // Se borra el contenido del elemento section
+        section.innerHTML = ' ';
+        // Se crea un nuevo párrafo para mostrar el valor de myName
+        const para1 = document.createElement('p');
+        para1.textContent = myName;
+        // Se crea un nuevo párrafo para mostrar el valor de myAge
+        const para2 = document.createElement('p');
+        para2.textContent = myAge;
+        // Se añaden los párrafos al elemento section
+        section.appendChild(para1);
+        section.appendChild(para2);
+
+    </script>
+</body>
+</html>

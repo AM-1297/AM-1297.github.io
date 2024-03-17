@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadenas 2</title>
+</head>
+<body>
+    <div id="section"></div>
+
+    <script>
+        // Definimos la cita y la subcadena
+        const quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
+        const substring = 'green eggs and ham';
+
+        // Buscamos la longitud de la cita y la almacenamos en quoteLength
+        const quoteLength = quote.length;
+
+        // Buscamos la posición del índice donde aparece substring en quote y la almacenamos en index
+        const index = quote.indexOf(substring);
+
+        // Recortamos la cita original para obtener la cita revisada y la almacenamos en revisedQuote
+        const revisedQuote = quote.slice(0, index) + 'No me gustan los huevos verdes y el jamón' + quote.slice(index + substring.length);
+
+        // Seleccionamos el elemento div con el ID "section"
+        const section = document.getElementById('section');
+
+        // Limpiamos el contenido existente del elemento section
+        section.innerHTML = ' ';
+
+        // Creamos dos elementos de párrafo para mostrar los resultados
+        const para1 = document.createElement('p');
+        const para2 = document.createElement('p');
+
+        // Establecemos el contenido de los párrafos
+        para1.textContent = `The quote is ${quoteLength} characters long.`;
+        para2.textContent = revisedQuote;
+
+        // Agregamos los párrafos al elemento section
+        section.appendChild(para1);
+        section.appendChild(para2);
+    </script>
+</body>
+</html>

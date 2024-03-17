@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables 3</title>
+</head>
+<body>
+    <!-- Se crea un div con el id "section" donde se mostrarán los resultados -->
+    <div id="section"></div>
+
+    <script>
+        // Add your code here
+        // Se inicializa la variable myName con el valor 'Default'
+        let myName = 'Default';
+        // Se cambia el valor de la variable myName a 'Chris'
+        myName = 'Chris'; // Cambia la variable constante a una variable let para poder reasignarla
+            
+        // Se inicializa la variable myAge con el valor 42
+        let myAge = 42; // Elimina las comillas para que myAge sea un número en lugar de una cadena
+            
+        // Don't edit the code below here!
+        // No editar el código a continuación
+            
+        // Se accede al elemento con id "section"
+        const section = document.getElementById('section');
+        section.innerHTML = ' ';
+        // Se crean dos elementos de párrafo
+        const para1 = document.createElement('p');
+        const para2 = document.createElement('p');
+        // Se establece el texto del primer párrafo con el valor de myName
+        para1.textContent = myName;
+        // Se establece el texto del segundo párrafo con una cadena interpolada que muestra el resultado de sumar 20 a myAge
+        para2.textContent = `In 20 years, I will be ${myAge + 20}`;
+        // Se añaden los párrafos al elemento con id "section"
+        section.appendChild(para1);
+        section.appendChild(para2);
+
+    </script>
+</body>
+</html>

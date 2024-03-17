@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadenas 4</title>
+</head>
+<body>
+    <div id="section"></div>
+
+    <script>
+        // Definimos los valores
+        const theorem = 'Pythagorean theorem';
+        const a = 5;
+        const b = 8;
+
+        // Calculamos la longitud de la hipotenusa usando el teorema de Pitágoras
+        const c = Math.sqrt(a * a + b * b);
+
+        // Usamos una plantilla literal para construir la cadena con los valores calculados
+        const myString = `Using ${theorem}, we can work out that if the two shortest sides of a right-angled triangle have lengths of ${a} and ${b}, the length of the hypotenuse is ${c.toFixed(2)}.`;
+
+        // Seleccionamos el elemento div con el ID "section"
+        const section = document.getElementById('section');
+
+        // Limpiamos el contenido existente del elemento section
+        section.innerHTML = ' ';
+
+        // Creamos un elemento de párrafo para mostrar la cadena actualizada
+        const para1 = document.createElement('p');
+
+        // Establecemos el contenido del párrafo
+        para1.textContent = myString;
+
+        // Agregamos el párrafo al elemento section
+        section.appendChild(para1);
+    </script>
+</body>
+</html>

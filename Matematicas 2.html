@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematicas 2</title>
+</head>
+<body>
+    <!-- Se crea un div con el id "section" donde se mostrarán los resultados -->
+    <div id="section"></div>
+
+    <script>
+        // Add/update your code here
+        // Se inicializan las variables result y result2 con operaciones matemáticas
+        let result = 7 + 13 / 9 + 7;
+        let result2 = 100 / 2 * 6;
+
+        // Se multiplica el resultado de result por result2 y se asigna el resultado a result
+        result *= result2; // Multiplica result por result2 y asigna el resultado nuevamente a result
+
+        // Se formatea el resultado con 2 decimales y se almacena en finalResult
+        let finalResult = result.toFixed(2); // Formatea result con 2 decimales y lo almacena en finalResult
+
+        // Se convierte finalResult en un número y se almacena en finalNumber
+        let finalNumber = parseFloat(finalResult); // Convierte finalResult en un número y lo almacena en finalNumber
+
+        // Don't edit the code below here!
+        // No editar el código a continuación
+
+        // Se accede al elemento con id "section" y se le añaden los resultados como párrafos
+        const section = document.getElementById('section');
+        section.innerHTML = ' ';
+        const para1 = document.createElement('p');
+        para1.textContent = `Your finalResult is ${finalResult}`;
+        const para2 = document.createElement('p');
+        const finalNumberCheck = typeof finalNumber === 'number' ? 'finalNumber is a number type. Well done!' : `Ooops! finalNumber is not a number.`;
+        para2.textContent = finalNumberCheck;
+
+        section.appendChild(para1);
+        section.appendChild(para2);
+    </script>
+</body>
+</html>

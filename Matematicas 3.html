@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematicas 3</title>
+</head>
+<body>
+    <!-- Elemento donde se mostrarán los resultados -->
+    <section id="section"></section>
+
+    <script>
+        // Statement 1: The elephant weighs less than the mouse
+        // Declaración 1: El elefante pesa menos que el ratón
+        const eleWeight = 1000;
+        const mouseWeight = 2;
+
+        // Statement 2: The Ostrich is taller than the duck
+        // Declaración 2: El avestruz es más alto que el pato
+        const ostrichHeight = 2;
+        const duckHeight = 0.3;
+
+        // Statement 3: The two passwords match
+        // Declaración 3: Las dos contraseñas coinciden
+        const pwd1 = 'stromboli';
+        const pwd2 = 'stROmBoLi';
+
+        // Se comparan los pesos del elefante y del ratón
+        const weightComparison = eleWeight < mouseWeight;
+
+        // Se comparan las alturas del avestruz y del pato
+        const heightComparison = ostrichHeight > duckHeight;
+
+        // Se comparan las contraseñas
+        const pwdMatch = pwd1.toLowerCase() === pwd2.toLowerCase(); // Se convierten las contraseñas a minúsculas antes de compararlas
+
+        // Selecciona el elemento con el id "section"
+        const section = document.getElementById('section');
+
+        // Borra el contenido existente del elemento section
+        section.innerHTML = ' ';
+
+        // Crea tres elementos de párrafo para mostrar los resultados de las comparaciones
+        const para1 = document.createElement('p');
+        const para2 = document.createElement('p');
+        const para3 = document.createElement('p');
+
+        // Determina los resultados de las comparaciones y establece el texto correspondiente en los párrafos
+        const weightTest = weightComparison ? 'Verdadero — ¡los elefantes pesan menos que los ratones!?' : 'Falso — ¡por supuesto que un elefante es más pesado que un ratón!';
+        const heightTest = heightComparison ? 'Verdadero — ¡un avestruz es de hecho más alto que un pato!' : 'Falso — aparentemente un pato es más alto que un avestruz!?';
+        const pwdTest = pwdMatch ? 'Verdadero — las contraseñas coinciden.' : 'Falso — las contraseñas no coinciden; por favor, revísalas.';
+
+        // Establece el texto de los párrafos
+        para1.textContent = weightTest;
+        para2.textContent = heightTest;
+        para3.textContent = pwdTest;
+
+        // Agrega los párrafos al elemento section
+        section.appendChild(para1);
+        section.appendChild(para2);
+        section.appendChild(para3);
+    </script>
+</body>
+</html>
